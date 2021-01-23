@@ -1,8 +1,8 @@
 {
     "name": "Apache2 Lite",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "slug": "apache2lite",
-    "description": "Apache2 Webserver Addon (Lite)",
+    "description": "Apache2 Webserver Add-on (Lite)",
     "url": "https://github.com/hulkhaugen/hassio-addons/tree/master/apache2lite",
     "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
     "startup": "application",
@@ -10,7 +10,7 @@
     "webui": "[PROTO:ssl]://[HOST]:[PORT:80]",
     "map": ["share:rw", "media:rw", "ssl"],
     "ingress": true,
-    "panel_icon": "mdi:web-box",
+    "panel_icon": "mdi:web",
     "options": {
       "document_root": "/share/htdocs",
       "default_conf": "default",
@@ -34,7 +34,7 @@
       "443": 443
     },
     "ports_description": {
-      "80/tcp": "Web interface http",
+      "80/tcp": "HTTP Web interface",
       "443/tcp": "SSL Web interface"
     }
   }
