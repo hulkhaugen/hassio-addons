@@ -20,7 +20,7 @@ This add-on is a docker image containing `apache2` and `apache2-ssl`
 ## Installation
 
 The installation of this add-on is pretty straightforward and not different in comparison to installing any other custom Home Assistant add-on.
-Just add my repo to the HassIO addons repositorys: https://github.com/hulkhaugen/hassio-addons
+Just add my repo to the HassIO add-ons repositorys: https://github.com/hulkhaugen/hassio-addons
 
 1. Create the subfolder where you want to deploy your website files. Must be a subfolder of `/share` or `/media`. This add-on will NOT generate the folder, and setup will fail. The default folder is `/share/htdocs` unless you've defined anything else.  
 2. Copy your assets the newly created folder. If not, a generic `index.html` welcome site will be copied as a placeholder.
@@ -47,7 +47,7 @@ keyfile: privkey.pem
 
 This option is needed. Change it depending where your root webfolder is on your homeassistant installation.
 
-Note: it has to be somewhere in the /share or /media folder! Other folders are not visible to this add-on.
+Note: it has to be somewhere in the `/share` or `/media` folder! Other folders are not visible to this add-on.
 
 ### Option: `default_conf` & `default_ssl_conf`
 
@@ -87,7 +87,7 @@ You could [open an issue here][issue] GitHub.
 ## Authors & contributors
 
 The original program is from the Apache Project. For more informatios please visit this page: https://httpd.apache.org/  
-The original HassIO addon is brought to you by [FaserF]  
+The original HassIO add-on is brought to you by [FaserF]  
 This trimmed down version is attepted by [hulkhaugen]
 
 ## License
