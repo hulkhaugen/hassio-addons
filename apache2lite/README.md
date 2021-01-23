@@ -45,9 +45,9 @@ keyfile: privkey.pem
 
 ### Option: `document_root`
 
-This option is needed. Change it depending where your root webfolder is on your homeassistant installation.
+Change it depending where your root webfolder is on your Home Assistant installation. Default is `/share/htdocs`.
 
-Note: it has to be somewhere in the `/share` or `/media` folder! Other folders are not visible to this add-on.
+**Note:** It has to be a subfolder of either `/share` or `/media`, as the other folders are not visible to this add-on. The specified subfolder has to be manually created, or else the add-on will fail to start.
 
 ### Option: `default_conf` & `default_ssl_conf`
 
@@ -57,14 +57,14 @@ default -> the default apache2 add-on file will be used
 
 get_config -> Get a copy of the default apache2 add-on config file to your `/share` folder.
 
-`path/to/your/new/apache2.conf` -> Please change the location depending where your custom `000-default.conf` / `000-default-le-ssl.conf` file is, f.e.: `/share/apache2/000-default.conf`  
-/// More Information: https://cwiki.apache.org/confluence/display/HTTPD/ExampleVhosts
+Please change the location depending where your custom `000-default.conf` / `000-default-le-ssl.conf` file is, f.e.: `/share/apache2/000-default.conf`  
+**More Information:** https://cwiki.apache.org/confluence/display/HTTPD/ExampleVhosts
 
 Please note, that I wont give any support if you are using custom apache2 config files and are recieving any apache2 errors!
 
 ### Option: `website_name`
 
-This option is needed, if you enable ssl to true. If you are not using SSL put anything in here, as it doesn't matter.
+This option is needed, if you enable SSL to true. If you are not using SSL put anything in here, as it doesn't matter.
 
 ### Option: `ssl`
 
@@ -87,8 +87,8 @@ You could [open an issue here][issue] GitHub.
 ## Authors & contributors
 
 The original program is from the Apache Project. For more informatios please visit this page: https://httpd.apache.org/  
-The original HassIO add-on is brought to you by [FaserF]  
-This trimmed down version is attepted by [hulkhaugen]
+The original HassIO add-on is brought to you by [FaserF](https://github.com/FraserF)  
+This trimmed down version is attepted by [hulkhaugen](https://github.com/hulkhaugen)  
 
 ## License
 
