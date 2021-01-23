@@ -57,7 +57,7 @@ default -> the default apache2 add-on file will be used
 
 get_config -> Get a copy of the default apache2 add-on config file to your `/share` folder.
 
-path/to/your/new/apache2.conf -> Please change the location depending where your custom 000-default.conf / 000-default-le-ssl.conf file is, f.e.: /share/apache2/000-default.conf  
+`path/to/your/new/apache2.conf` -> Please change the location depending where your custom `000-default.conf` / `000-default-le-ssl.conf` file is, f.e.: `/share/apache2/000-default.conf`  
 /// More Information: https://cwiki.apache.org/confluence/display/HTTPD/ExampleVhosts
 
 Please note, that I wont give any support if you are using custom apache2 config files and are recieving any apache2 errors!
@@ -72,7 +72,7 @@ Enables/Disables SSL (HTTPS) on the web interface. Set it `true` to enable it, `
 
 If you need a self-signed certificate, have a look at FraserF's openssl add-on: https://github.com/FaserF/hassio-addons/openssl
 
-**Note**: _The files MUST be stored in `/ssl/`, which is the default._
+**Note**: _The files MUST be stored in `/ssl`, which is the default._
 
 ## Ingress
 
