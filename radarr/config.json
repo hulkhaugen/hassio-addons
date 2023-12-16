@@ -1,0 +1,28 @@
+{
+  "name": "Radarr",
+  "version": "5.1.3.8246-ls196",
+  "slug": "radarr",
+  "description": "Radarr is a movie collection manager for Usenet and BitTorrent users",
+  "url": "https://github.com/hulkhaugen/hassio-addons/tree/master/sonarr",
+  "arch": [
+    "aarch64",
+    "amd64"
+  ],
+  "init": false,
+  "webui": "http://[HOST]:[PORT:7878]",
+  "ports": {
+    "7878/tcp": 7878
+  },
+  "ports_description": {
+    "7878/tcp": "Radarr frontend"
+  },
+  "map": [
+    "addon_config:rw",
+    "media:rw",
+    "share:rw"
+  ],
+  "environment": {
+    "PUID": "0",
+    "PGID": "0"
+  }
+}
