@@ -6,5 +6,6 @@ RUN \
     nginx=$BUILD_VERSION
 COPY rootfs /
 COPY run.sh /
+RUN chmod a+x /run.sh
 CMD [ "/run.sh" ]
 LABEL maintainer="hulkhaugen (https://github.com/hulkhaugen)"
