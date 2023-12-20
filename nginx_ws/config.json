@@ -1,8 +1,8 @@
 {
     "name": "NGINX Web Server",
-    "version": "1.24.0-r14",
+    "version": "1.25.3-alpine3.18-slim",
     "slug": "nginx_ws",
-    "description": "NGINX Web Server Add-on for hosting up to 3 servers",
+    "description": "Nginx Web Server based on Alpine Linux",
     "url": "https://github.com/hulkhaugen/hassio-addons/tree/master/nginx_ws",
     "arch": [
         "armhf",
@@ -12,32 +12,14 @@
         "i386"
     ],
     "init": false,
-    "map": [
-        "addon_config:rw",
-        "media:rw",
-        "share:rw"
-    ],
-    "options": {
-        "name_1": "example.com www.example.com",
-        "root_1": "/config/www/html"
-    },
-    "schema": {
-        "name_1": "str",
-        "root_1": "str",
-        "name_2": "str?",
-        "root_2": "str?",
-        "name_3": "str?",
-        "root_3": "str?"
-    },
+    "webui": "http://[HOST]:[PORT:8000]",
     "ports": {
-        "8001/tcp": 8001,
-        "8002/tcp": null,
-        "8003/tcp": null
+        "80/tcp": 8000
     },
     "ports_description": {
-        "8001/tcp": "Web Server 1 - HTTP interface",
-        "8002/tcp": "Web Server 2 - HTTP interface",
-        "8003/tcp": "Web Server 3 - HTTP interface"
+        "80/tcp": "HTTP Interface"
     },
-    "webui": "http://[HOST]:[PORT:8001]"
+    "map": [
+        "addon_config:rw"
+    ]
 }
