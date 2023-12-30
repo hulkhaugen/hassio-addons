@@ -20,5 +20,9 @@
     "addon_config:rw",
     "media:rw",
     "share:rw"
-  ]
+  ],
+  "environment": {
+    "PUID": "0",
+    "PGID": "0"
+  }
 }
