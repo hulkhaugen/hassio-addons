@@ -1,5 +1,9 @@
 # Sonarr Add-on
 
+### 12.01.2024 - 4.0.0.748-ls221
+  - Update to latest version [4.0.0.748-ls221](https://github.com/linuxserver/docker-sonarr/releases/tag/4.0.0.748-ls221)
+  - Excluding all Sonarr files and folders except for the `Backups` folder from HA config to minimize HA backup file sizes. These backups are created weekly by Sonarr, and can be managed in the Sonarr GUI.
+
 ### 01.01.2024 - 4.0.0.748-ls220
   - Update to latest version [4.0.0.748-ls220](https://github.com/linuxserver/docker-sonarr/releases/tag/4.0.0.748-ls220)
 

@@ -1,6 +1,6 @@
 {
   "name": "Sonarr",
-  "version": "4.0.0.748-ls220",
+  "version": "4.0.0.748-ls221",
   "slug": "sonarr",
   "description": "Sonarr is a PVR for usenet and bittorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.",
   "url": "https://github.com/hulkhaugen/hassio-addons/tree/master/sonarr",
@@ -21,8 +21,12 @@
     "media:rw",
     "share:rw"
   ],
-  "environment": {
-    "PUID": "0",
-    "PGID": "0"
-  }
+  "backup_exclude": [
+    "**/asp",
+    "**/logs",
+    "**/MediaCover",
+    "**/*.xml",
+    "**/*.db*",
+    "**/sonarr.pid"
+  ]
 }
