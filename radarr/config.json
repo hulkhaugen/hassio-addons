@@ -1,6 +1,6 @@
 {
   "name": "Radarr",
-  "version": "5.2.6.8376-ls197",
+  "version": "5.2.6.8376-ls198",
   "slug": "radarr",
   "description": "Radarr is a movie collection manager for Usenet and BitTorrent users",
   "url": "https://github.com/hulkhaugen/hassio-addons/tree/master/sonarr",
@@ -21,8 +21,12 @@
     "media:rw",
     "share:rw"
   ],
-  "environment": {
-    "PUID": "0",
-    "PGID": "0"
-  }
+  "backup_exclude": [
+    "**/asp",
+    "**/logs",
+    "**/MediaCover",
+    "**/*.xml",
+    "**/*.db*",
+    "**/radarr.pid"
+  ]
 }
