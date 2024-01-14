@@ -1,5 +1,9 @@
 # qBittorrent Add-on
 
+### 14.01.2024 - 4.6.2-r0-ls305
+  - Update to latest version [4.6.2-r0-ls305](https://github.com/linuxserver/docker-qbittorrent/releases/tag/4.6.2-r0-ls305)
+  - Fix permissions by setting PUID and PGID environment variables to 0.
+
 ### 12.01.2024 - 4.6.2-r0-ls304
   - Update to latest version [4.6.2-r0-ls304](https://github.com/linuxserver/docker-qbittorrent/releases/tag/4.6.2-r0-ls304)
   - Excluding some unimportant data from HA backups to save space
