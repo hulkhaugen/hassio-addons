@@ -1,8 +1,12 @@
 # Radarr Add-on
 
-### 12.01.2023 - 5.2.6.8376-ls198
+### 14.01.2024 - 5.2.6.8376-ls199
+  - Update to latest version [5.2.6.8376-ls199](https://github.com/linuxserver/docker-radarr/releases/tag/5.2.6.8376-ls199)
+  - Fix permissions by setting PUID and PGID environment variables to 0
+
+### 12.01.2024 - 5.2.6.8376-ls198
   - Update to latest version [5.2.6.8376-ls198](https://github.com/linuxserver/docker-radarr/releases/tag/5.2.6.8376-ls198)
-  - Excluding all Radarr files and folders except for the `Backups` folder from HA config to minimize HA backup file sizes. These backups are created weekly by Radarr, and can be managed in the Radarr GUI.
+  - Excluding all Radarr files and folders except for the `Backups` folder from HA config to minimize HA backup file sizes. These backups are created weekly by Radarr, and can be managed in the Radarr GUI
 
 ### 25.12.2023 - 5.2.6.8376-ls197
   - Update to latest version [5.2.6.8376-ls197](https://github.com/linuxserver/docker-radarr/releases/tag/5.2.6.8376-ls197)
