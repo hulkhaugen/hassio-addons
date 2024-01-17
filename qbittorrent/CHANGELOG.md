@@ -1,16 +1,19 @@
 # qBittorrent Add-on
 
+### 17.01.2024 - 4.6.3-r0-ls306
+  - Update to latest version [4.6.3-r0-ls306](https://github.com/linuxserver/docker-qbittorrent/releases/tag/4.6.2-r0-ls306).
+
 ### 14.01.2024 - 4.6.2-r0-ls305
-  - Update to latest version [4.6.2-r0-ls305](https://github.com/linuxserver/docker-qbittorrent/releases/tag/4.6.2-r0-ls305)
+  - Update to latest version [4.6.2-r0-ls305](https://github.com/linuxserver/docker-qbittorrent/releases/tag/4.6.2-r0-ls305).
   - Fix permissions by setting PUID and PGID environment variables to 0.
 
 ### 12.01.2024 - 4.6.2-r0-ls304
-  - Update to latest version [4.6.2-r0-ls304](https://github.com/linuxserver/docker-qbittorrent/releases/tag/4.6.2-r0-ls304)
-  - Excluding some unimportant data from HA backups to save space
+  - Update to latest version [4.6.2-r0-ls304](https://github.com/linuxserver/docker-qbittorrent/releases/tag/4.6.2-r0-ls304).
+  - Excluding some unimportant data from HA backups to save space.
 
 ### 15.12.2023 - 4.6.2-r0-ls302
-  - Initial Add-on release based on [LinuxServer.io qBittorrent 4.6.2-r0-ls302](https://github.com/linuxserver/docker-qbittorrent/releases/tag/4.6.2-r0-ls302)
-  - Changed the default listening port from 6881 to 60065
+  - Initial Add-on release based on [LinuxServer.io qBittorrent 4.6.2-r0-ls302](https://github.com/linuxserver/docker-qbittorrent/releases/tag/4.6.2-r0-ls302).
+  - Changed the default listening port from 6881 to 60065.
   - Disabled the following default settings as they are not allowed on some private trackers:
     - DHT (Decentralized Network)
     - PeX (Peer Exchange)

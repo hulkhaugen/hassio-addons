@@ -1,6 +1,6 @@
 {
   "name": "qBittorrent",
-  "version": "4.6.2-r0-ls305",
+  "version": "4.6.3-r0-ls306",
   "slug": "qbittorrent",
   "description": "The qBittorrent project aims to provide an open-source software alternative to µTorrent",
   "url": "https://github.com/hulkhaugen/hassio-addons/tree/master/qbittorrent",
