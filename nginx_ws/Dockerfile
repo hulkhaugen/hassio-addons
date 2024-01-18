@@ -1,4 +1,4 @@
-ARG BUILD_FROM
-FROM ${BUILD_FROM}
-COPY default.conf /etc/nginx/conf.d
+ARG BUILD_VERSION
+FROM docker.io/library/nginx:$BUILD_VERSION
+COPY rootfs /
 LABEL maintainer="hulkhaugen (https://github.com/hulkhaugen)"
