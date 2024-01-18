@@ -1,5 +1,8 @@
 # Prowlarr Add-on
 
+### 18.01.2024 - 1.12.2.4211-ls48
+  - Update to latest version [1.12.2.4211-ls48](https://github.com/linuxserver/docker-prowlarr/releases/tag/1.12.2.4211-ls48).
+
 ### 17.01.2024 - 1.11.4.4173-ls47
   - Update to latest version [1.11.4.4173-ls47](https://github.com/linuxserver/docker-prowlarr/releases/tag/1.11.4.4173-ls47).
   - Fix permissions by setting PUID and PGID environment variables to 0.
