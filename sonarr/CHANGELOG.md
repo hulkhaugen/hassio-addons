@@ -1,5 +1,8 @@
 # Sonarr Add-on
 
+### 20.01.2024 - 4.0.1.929-ls222
+  - Reverted version scheme to use ls-tags and update to latest version [4.0.1.929-ls222](https://github.com/linuxserver/docker-sonarr/releases).
+
 ### 18.01.2024 - 4.0.0.748
   - Changed version scheme to ignore ls-tags and just use latest Sonarr version [4.0.0.748](https://github.com/linuxserver/docker-sonarr/releases).
   - Added `build.json` for specificity of image to pull based on arcitechure.
