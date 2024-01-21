@@ -1,7 +1,11 @@
 # qBittorrent Add-on
 
+### 21.01.2024 - 4.6.3-r0-ls307 
+  - Update to latest version [4.6.3-r0-ls307](https://github.com/linuxserver/docker-qbittorrent/releases/tag/4.6.3-r0-ls307).
+  - Added `build.json` for specificity of image to pull based on arcitechure.
+
 ### 17.01.2024 - 4.6.3-r0-ls306
-  - Update to latest version [4.6.3-r0-ls306](https://github.com/linuxserver/docker-qbittorrent/releases/tag/4.6.2-r0-ls306).
+  - Update to latest version [4.6.3-r0-ls306](https://github.com/linuxserver/docker-qbittorrent/releases/tag/4.6.3-r0-ls306).
 
 ### 14.01.2024 - 4.6.2-r0-ls305
   - Update to latest version [4.6.2-r0-ls305](https://github.com/linuxserver/docker-qbittorrent/releases/tag/4.6.2-r0-ls305).
