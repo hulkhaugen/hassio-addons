@@ -17,6 +17,9 @@ This is a small set of Add-ons for Home Assistant. These are ment to be as plain
 
 # Add-ons
 
+## EmulatorJS
+<img src="https://raw.githubusercontent.com/hulkhaugen/hassio-addons/main/emulatorjs/icon.png" alt="EmulatorJS" width="64" align="left" style="padding-right:12px">[EmulatorJS](https://docs.linuxserver.io/images/docker-emulatorjs/) - In browser web based emulation portable to nearly any device for many retro consoles. A mix of emulators is used between Libretro and EmulatorJS. The frontend application has been initially optimized around being used with a standard gamepad. The navigation revolves around the up/down/left/right keys to browse the menus and launch games. Mobile browsers will function, just keep in mind compatibility will be reduced especially for CD based games.
+
 ## Jellyfin
 <img src="https://raw.githubusercontent.com/hulkhaugen/hassio-addons/main/jellyfin/icon.png" alt="Jellyfin" width="64" align="left" style="padding-right:12px">[Jellyfin](https://jellyfin.org/) is a Free Software Media System that puts you in control of managing and streaming your media. It is an alternative to the proprietary Emby and Plex, to provide media from a dedicated server to end-user devices via multiple apps. Jellyfin is descended from Emby's 3.5.2 release and ported to the .NET Core framework to enable full cross-platform support. There are no strings attached, no premium licenses or features, and no hidden agendas: just a team who want to build something better and work together to achieve it.
 

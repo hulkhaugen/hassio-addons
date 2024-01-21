@@ -1,0 +1,10 @@
+#!/usr/bin/with-contenv bash
+
+if ls /config/disable_ipfs* >/dev/null 2>&1; then
+  echo "[svc-ipfs] Disabled, remove /addons_config/5ec262d9_emulatorjs/disable_ipfs to enable"
+  sleep infinity
+fi
+
+HOME=/data exec \
+    s6-notifyoncheck -d -n 300 -w 1000 -c "nc -z localhost 4001" \
+        s6-setuidgid abc ipfs daemon
