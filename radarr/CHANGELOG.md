@@ -1,4 +1,7 @@
 # Radarr Add-on
+  - Split up installations instructions from README.md to DOCS.md - Added `build.json` for specificity of image to pull based on arcitechure.
+### 21.01.2024 - 5.2.6.8376-ls200 
+  - Update to latest version [5.2.6.8376-ls200](https://github.com/linuxserver/docker-radarr/releases/tag/5.2.6.8376-ls200)
 
 ### 14.01.2024 - 5.2.6.8376-ls199
   - Update to latest version [5.2.6.8376-ls199](https://github.com/linuxserver/docker-radarr/releases/tag/5.2.6.8376-ls199)
