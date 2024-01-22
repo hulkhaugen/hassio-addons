@@ -11,14 +11,14 @@
 
 ### Installation
 1. Locate **EmulatorJS** and click `Install`.
-2. If you want to change the **Frontend** port and/or the Rom/Manager port, this can be done in the `Configuration` tab.
+2. If you want to change the **EmulatorJS Frontend** port and/or the **EmulatorJS Manager** port, this can be done in the `Configuration` tab.
 3. Once the installation has finnished, you can start the Add-on.
-4. Go to the Rom/Management interface tool at http://\<your-server-ip\>:\<port\> and download the default fileset.
+4. Go to the `EmulatorJS Manager` at http://\<your-server-ip\>:\<port\> and download the default fileset.
 5. Copy Rom files (games) to the corresponding folders at `/addon_configs/5ec262d9_emulatorjs/data/<system>/roms/`.
 6. Click on `Scan` roms for the relevant emulator(s).
 7. Click on the emulator(s) in the left column to manage art and click `Add All Roms to Config`.
 8. Click on the **Web UI** and play some games.
 
-This container can also be started without IPFS once you collection is set by creating an empty file named `disable_ipfs` in `/addon_configs/5ec262d9_emulatorjs/`.
+This container can also be started without IPFS once your collection is set by creating an empty file named `disable_ipfs` in `/addon_configs/5ec262d9_emulatorjs/`. Note that the filename matching logic is `disable_ipfs*`, so renaming it to `.bak` or `.off` won't change anything. 
 
 More info can be found at [Linuxserver.io - EmulatorJS](https://docs.linuxserver.io/images/docker-emulatorjs/).
