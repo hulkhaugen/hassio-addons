@@ -24,5 +24,9 @@
   },
   "map": [
     "addon_config:rw"
-  ]
+  ],
+  "environment": {
+    "PUID": "0",
+    "PGID": "0"
+  }
 }
