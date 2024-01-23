@@ -1,6 +1,6 @@
 {
   "build_from": {
-    "aarch64": "lscr.io/linuxserver/jellyfin:arm64v8-10.8.13-1-ls241",
-    "amd64": "lscr.io/linuxserver/jellyfin:amd64-10.8.13-1-ls241"
+    "aarch64": "lscr.io/linuxserver/jellyfin:arm64v8-10.8.13-1-ls242",
+    "amd64": "lscr.io/linuxserver/jellyfin:amd64-10.8.13-1-ls242"
   }
 }
