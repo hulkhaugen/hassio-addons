@@ -1,6 +1,6 @@
 {
   "name": "EmulatorJS",
-  "version": "1.8.3-ls88",
+  "version": "1.8.3-ls89",
   "slug": "emulatorjs",
   "description": "In browser web based emulation portable to nearly any device for many retro consoles. A mix of emulators is used between Libretro and EmulatorJS.",
   "url": "https://github.com/hulkhaugen/hassio-addons/tree/master/emulatorjs",
@@ -22,6 +22,18 @@
     "4001/tcp": "IPFS TCP (Optional)",
     "4001/udp": "IPFS UDP (Optional)"
   },
+  "options": {
+    "disable_ipfs": false
+  },
+  "schema": {
+    "disable_ipfs": "bool"
+  },
+  "backup_exclude": [
+    "**/data/.ipfs",
+    "**/data/main",
+    "**/data/metadata",
+    "**/videos"
+  ],
   "map": [
     "addon_config:rw"
   ]
