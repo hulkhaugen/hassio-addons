@@ -1,2 +1,3 @@
-ARG BUILD_VERSION
-FROM lscr.io/linuxserver/prowlarr:$BUILD_VERSION
+ARG BUILD_FROM
+FROM $BUILD_FROM
+LABEL maintainer="hulkhaugen (https://github.com/hulkhaugen)"
