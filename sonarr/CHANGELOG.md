@@ -1,5 +1,8 @@
 # Sonarr Add-on
 
+### 27.01.2024 - 4.0.1.929-ls223 
+  - Update to latest version [4.0.1.929-ls223](https://github.com/linuxserver/docker-sonarr/releases/tag/4.0.1.929-ls223).
+
 ### 20.01.2024 - 4.0.1.929-ls222
   - Reverted version scheme to use ls-tags and update to latest version [4.0.1.929-ls222](https://github.com/linuxserver/docker-sonarr/releases).
 
