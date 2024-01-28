@@ -1,14 +1,14 @@
 {
     "name": "NGINX Web Server",
-    "version": "1.25.3-alpine-slim",
+    "version": "1.25.3-alpine3.18-slim",
     "slug": "nginx_ws",
-    "description": "NGINX Web Server based on Alpine Slim. Additional APK packages and PyPI dependencies can be added with .txt-files. Cronjobs can be setup in the config folder.",
+    "description": "Highly configurable NGINX Web Server based on Alpine Slim.",
     "url": "https://github.com/hulkhaugen/hassio-addons/tree/master/nginx_ws",
     "arch": [
-        "armhf",
-        "armv7",
         "aarch64",
         "amd64",
+        "armhf",
+        "armv7",
         "i386"
     ],
     "init": false,
@@ -24,9 +24,19 @@
         "media:rw",
         "share:rw"
     ],
+    "options": {
+        "base_dir": "/config",
+        "site_name": "example",
+        "site_url": "www.example.com"
+    },
+    "schema": {
+        "base_dir": "str",
+        "site_name": "str",
+        "site_url": "str"
+    },
     "backup_exclude": [
         "**/__pycache__",
-        "**/www/temp",
-        "**/5ec262d9_nginx_ws/log"
+        "**/tmp",
+        "**/log"
     ]
 }

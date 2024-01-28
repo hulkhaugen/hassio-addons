@@ -1,0 +1,32 @@
+# shellcheck shell=sh
+# Hassio modifications
+. /defaults/variables
+
+# Updating variables file with values from Add-on config
+sed -i "2s#.*#SITENAME=\"${SITENAME}\"#" "/defaults/variables"
+sed -i "3s#.*#SITE_URL=\"${SITE_URL}\"#" "/defaults/variables"
+sed -i "4s#.*#BASE_DIR=\"${BASE_DIR}\"#" "/defaults/variables"
+
+# Creating folder structure
+for DIR in $DIRS; do
+    if [ ! -d "$DIR" ]; then
+        echo "$0: Creating folder ${DIR}"
+        mkdir -p "$DIR"
+    fi
+done
+
+# Copying original scripts to new folder
+for script in /docker-entrypoint.d/*; do
+    if [ -f "$script" ] && [ ! -f "${INIT_DIR}/$(basename "$script")" ]; then
+        echo "$0: Copying $script to ${INIT_DIR}"
+        cp -r "$script" "$INIT_DIR"
+    fi
+done
+
+# Adding execution permission to original and custom scripts in new location
+for script in "$INIT_DIR"/*; do
+    if [ ! -x "${script}" ]; then
+        echo "$0: Making ${script} executable"
+        chmod +x "${script}"
+    fi
+done

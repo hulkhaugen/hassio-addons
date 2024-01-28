@@ -10,29 +10,40 @@
 4. Paste https://github.com/hulkhaugen/hassio-addons and click `Add`.
 
 ### Install Add-on
-1. Locate **Nginx Web Server** and click `Install`.
-2. The default external port is `8765`, but you can change this as you see fit.
-3. Put your site files in the root folder `/addon_configs/5ec262d9_nginx_ws/www/html/`.
-4. Once the configuration is done, you can start the Add-on.
-5. Click on the `Open Web UI` button.
+1. Locate **NGINX Web Server** and click `Install`.
+2. Check the Add-on configuration: 
+   - `HTTP Interface` is the port where you can access your site. Default is `8765`.
+   - `base_folder` is where the site and config files will be stored. Default is `/config` which appears as `/addon_configs/5ec262d9_nginx_ws` outside the container.
+   - `site_name` is used for creating subfolders and configurations.
+   - `site_url` is used in the NGINX `<site_name>.conf` file.
+3. Start the Add-on and check the logs. If evereything went well, click on the `Open Web UI` button or open `http://<server-ip-adress>:8765`. Unless you have your own index.html file already in the html folder, you will see a NGINX welcome site.
+
+### Configuration alternatives
+- Add Alpine apk packages to the `<base_dir>/<site_name>/cfg/apk.txt` file if needed.
+- Add Python pip packages to the `<base_dir>/<site_name>/cfg/requirements.txt` file if needed.
+- Add script(s) or modify existing ons in the `<base_dir>/<site_name>/cfg/cont-init.d/` folder, and it will run on (re)start. If you delete an original script, it be re-created on restart. Modifications will not be overwritten. Erase content in original scripts to disable.
+- Setup scheduled tasks in the `<base_dir>/<site_name>/cfg/crontab` file if needed.
+- Modify the server at `<base_dir>/<site_name>/nginx/<site_name>.conf` if needed.
 
 ## Folder structure
 
 ```
-config/                <- /addon_configs/5ec262d9_nginx_py/
- ├─ log/
- │  └─ nginx/
- ├─ nginx/
- │  └─ conf.d/
- │     └─ template.conf  <- Dummy file, edit to enable
- ├─ www/
- │  ├─ html/
- │  │  └─ index.html     <- Suggested location for index
- │  └─ temp/             <- Temporary files, not backed up
- ├─ apk.txt              <- Alpine packages to be installed
- ├─ crontab              <- Cron jobs, empty by default
- └─ requirements.txt     <- Pip packages to be installed
-```
+<base_folder>/
+ └─<site_name>/
+    ├─cfg/
+    │  ├─cont-init.d/
+    │  │  └─xx-script.sh           <- Scripts to run at startup
+    │  ├─log/
+    │  │  ├─<site_name>.access.log 
+    │  │  └─<site_name>.error.log 
+    │  ├─nginx/
+    │  │  └─<site_name>.conf       <- Server configuration
+    │  ├─apk.txt                   <- Alpine packages to be installed
+    │  ├─crontab                   <- Cron jobs
+    │  └─requirements.txt          <- Pip packages to be installed
+    └─html/
+       └─index.html                <- Web site
+ ```
 
 ### Example `apk.txt` file
 [Alpine Linux packages](https://pkgs.alpinelinux.org/packages)   
@@ -44,8 +55,17 @@ python3
 ```
 ### Example `requirements.txt` file
 [PyPI - The Python Package Index](https://pypi.org/)   
-These packages will be installed using the `pip3 install --no-cache-dir` command. Version numbers are optional.
+These packages will be installed using the `pip3 install --no-cache-dir` command. Version numbers are optional. If Python and/or py3-pip is not defined in `apk.txt`, they will still be installed anyway if anything is defined in this file.
 ```
 beautifulsoup4==4.12.2
 requests
+```
+### Example `crontab` file
+[Crontab.guru](https://crontab.guru/) is a helpful site to configure the crontab file. You'll need to restart the Add-on for changes in this file to take effect.
+```
+# Run daily every hour from 7 through 20
+0 7-20 * * * /usr/bin/python3 /config/example/cfg/py/my_script.py
+
+# Run script daily at 08:30
+30 8 * * * /share/scripts/my_script.sh
 ```
