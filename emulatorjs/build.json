@@ -1,6 +1,6 @@
 {
   "build_from": {
-    "aarch64": "lscr.io/linuxserver/emulatorjs:arm64v8-1.8.4-ls92",
-    "amd64": "lscr.io/linuxserver/emulatorjs:amd64-1.8.4-ls92"
+    "aarch64": "lscr.io/linuxserver/emulatorjs:arm64v8-1.8.5-ls93",
+    "amd64": "lscr.io/linuxserver/emulatorjs:amd64-1.8.5-ls93"
   }
 }

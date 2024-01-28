@@ -5,16 +5,22 @@
 lsiown abc:abc \
     /data
 
-# ipfs migrate check on startup
-if [[ -d "/data/.ipfs" ]]; then
-    echo "[ipfs-upgrade] Checking if fs-repo needs to be upgraded (this may take some time)"
-    HOME=/data s6-setuidgid abc /usr/bin/fs-repo-migrations -y -to 15
-fi
+# hassio variables
+DISABLE_IPFS=$(jq -r '.disable_ipfs' /data/options.json)
+ROM_DIR=$(jq -r '.roms_folder' /data/options.json)
 
-# ipfs config
-if [[ ! -d "/data/.ipfs" ]]; then
-    HOME=/data ipfs init --profile lowpower
-    lsiown -R abc:abc /data/.ipfs
+if [[ "${DISABLE_IPFS}" != true ]]; then
+    # ipfs migrate check on startup
+    if [[ -d "/data/.ipfs" ]]; then
+        echo "[ipfs-upgrade] Checking if fs-repo needs to be upgraded (this may take some time)"
+        HOME=/data s6-setuidgid abc /usr/bin/fs-repo-migrations -y -to 15
+    fi
+
+    # ipfs config
+    if [[ ! -d "/data/.ipfs" ]]; then
+        HOME=/data ipfs init --profile lowpower
+        lsiown -R abc:abc /data/.ipfs
+    fi
 fi
 
 # link user data to frontend
@@ -26,11 +32,11 @@ fi
 if [[ ! -d '/config/profile/default' ]]; then
     mkdir -p /config/profile/default
     echo "input_menu_toggle_gamepad_combo = 3
-system_directory = /home/web_user/retroarch/system/" > /config/profile/default/retroarch.cfg
+system_directory = /home/web_user/retroarch/system/" >/config/profile/default/retroarch.cfg
     lsiown -R abc:abc /config/profile
 fi
 if [[ ! -f '/config/profile/profile.json' ]]; then
-    echo '{}' > /config/profile/profile.json
+    echo '{}' >/config/profile/profile.json
     lsiown -R abc:abc /config/profile
 fi
 
@@ -41,13 +47,24 @@ cp /defaults/mime.types /etc/nginx/mime.types
 lsiown -R abc:root /var/lib/nginx
 
 # allow users to mount in ro rom dirs
-# hassio: modified to create rom folders in /config/roms
-DIRS='3do atari2600 atari7800 colecovision doom gba lynx n64 nes odyssey2 psx segaCD segaMD segaSaturn snes vb ws arcade atari5200 gb gbc jaguar msx nds ngp pce sega32x segaGG segaMS segaSG vectrex'
+DIRS='3do atari2600 atari5200 atari7800 colecovision doom gba lynx n64 nes odyssey2 psx segaCD segaMD segaSaturn snes vb ws arcade atari5200 gb gbc jaguar msx nds ngp pce sega32x segaGG segaMS segaSG vectrex'
+
+# hassio-mod: retrieve roms_folder to customize roms location
 for DIR in ${DIRS}; do
-	mkdir -p /config/roms/${DIR} 
-    if [[ ! -L "/data/${DIR}/roms" ]]; then
-        mkdir -p /data/${DIR}
-        ln -s /config/roms/${DIR} /data/${DIR}/roms
-        lsiown abc:abc /data/${DIR}
+    SYM_DIR="/data/${DIR}/roms"
+    OLD_DIR=$(readlink -f "${SYM_DIR}")
+
+    # Check if roms_dir has the correct symlink
+    if [[ -L "${SYM_DIR}" ]] && [[ "${ROM_DIR}/${DIR}" != "${OLD_DIR}" ]]; then
+        echo "[hassio-mod] Removing old symlink to ${SYM_DIR} from ${OLD_DIR}"
+        rm -f "${SYM_DIR}"
+    fi
+
+    # Check if symlink exist, create if not
+    if [[ ! -L "${SYM_DIR}" ]]; then
+        mkdir -p "${ROM_DIR}/${DIR}" "/data/${DIR}"
+        echo "[hassio-mod] Creating new symlink to ${SYM_DIR} from ${ROM_DIR}/${DIR}"
+        ln -s "${ROM_DIR}/${DIR}" "${SYM_DIR}"
+        lsiown abc:abc "/data/${DIR}"
     fi
 done

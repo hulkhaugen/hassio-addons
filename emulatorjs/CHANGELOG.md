@@ -1,5 +1,11 @@
 # EmulatorJS Add-on
 
+### 28.01.2024 - 1.8.5-ls93 
+  - Update to latest version [1.8.5-ls93](https://github.com/linuxserver/docker-emulatorjs/releases/tag/1.8.5-ls93).
+  - Added Atari 5200 support.
+  - Added config option to configure `roms_folder`.
+  - Added `rw` properties for the `media` and `share` folders.
+
 ### 26.01.2024 - 1.8.4-ls92 
   - Update to latest version [1.8.4-ls92](https://github.com/linuxserver/docker-emulatorjs/releases/tag/1.8.4-ls92).
 
