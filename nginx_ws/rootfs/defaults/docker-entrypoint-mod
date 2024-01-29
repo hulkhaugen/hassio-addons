@@ -1,11 +1,11 @@
-# shellcheck shell=sh
+# shellcheck shell=sh disable=SC1091
 # Hassio modifications
 . /defaults/variables
 
 # Updating variables file with values from Add-on config
-sed -i "2s#.*#SITENAME=\"${SITENAME}\"#" "/defaults/variables"
-sed -i "3s#.*#SITE_URL=\"${SITE_URL}\"#" "/defaults/variables"
-sed -i "4s#.*#BASE_DIR=\"${BASE_DIR}\"#" "/defaults/variables"
+sed -i "3s#.*#SITENAME=\"${SITENAME}\"#" "/defaults/variables"
+sed -i "4s#.*#SITE_URL=\"${SITE_URL}\"#" "/defaults/variables"
+sed -i "5s#.*#BASE_DIR=\"${BASE_DIR}\"#" "/defaults/variables"
 
 # Creating folder structure
 for DIR in $DIRS; do

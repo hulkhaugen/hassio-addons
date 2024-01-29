@@ -14,7 +14,7 @@
 2. Check the Add-on configuration: 
    - `HTTP Interface` is the port where you can access your site. Default is `8765`.
    - `base_folder` is where the site and config files will be stored. Default is `/config` which appears as `/addon_configs/5ec262d9_nginx_ws` outside the container.
-   - `site_name` is used for creating subfolders and configurations.
+   - `site_name` is used for configurations and creating subfolders.
    - `site_url` is used in the NGINX `<site_name>.conf` file.
 3. Start the Add-on and check the logs. If evereything went well, click on the `Open Web UI` button or open `http://<server-ip-adress>:8765`. Unless you have your own index.html file already in the html folder, you will see a NGINX welcome site.
 
@@ -24,6 +24,7 @@
 - Add script(s) or modify existing ons in the `<base_dir>/<site_name>/cfg/cont-init.d/` folder, and it will run on (re)start. If you delete an original script, it be re-created on restart. Modifications will not be overwritten. Erase content in original scripts to disable.
 - Setup scheduled tasks in the `<base_dir>/<site_name>/cfg/crontab` file if needed.
 - Modify the server at `<base_dir>/<site_name>/nginx/<site_name>.conf` if needed.
+- Add password protection to the whole server, or just a path/location under the main domain. Replace/update the deafault `.htpasswd` file as the default cridentials `user` and `password` are not very safe at all.
 
 ## Folder structure
 
@@ -37,21 +38,21 @@
     │  │  ├─<site_name>.access.log 
     │  │  └─<site_name>.error.log 
     │  ├─nginx/
+    │  │  ├─.htpasswd              <- Basic auth cridentials file
     │  │  └─<site_name>.conf       <- Server configuration
     │  ├─apk.txt                   <- Alpine packages to be installed
     │  ├─crontab                   <- Cron jobs
     │  └─requirements.txt          <- Pip packages to be installed
     └─html/
-       └─index.html                <- Web site
+       └─index.html                <- Website
  ```
 
 ### Example `apk.txt` file
 [Alpine Linux packages](https://pkgs.alpinelinux.org/packages)   
 These packages will be installed using the `apk add --no-cache` command. Version numbers are optional.
 ```
+apache2-utils
 bash=5.2.26-r0
-curl
-python3
 ```
 ### Example `requirements.txt` file
 [PyPI - The Python Package Index](https://pypi.org/)   
@@ -69,3 +70,10 @@ requests
 # Run script daily at 08:30
 30 8 * * * /share/scripts/my_script.sh
 ```
+
+### Example `.htpasswd` file
+[Htpasswd Generator](https://wtools.io/generate-htpasswd-online) is one of many online tools that can help you generate a `.htpasswd` file, like the one below where username is `user` and password is obviously `password`.
+```
+user:$apr1$5t0fhqlk$wlo9IyPjYDwmAjq6hDRzn0
+```
+

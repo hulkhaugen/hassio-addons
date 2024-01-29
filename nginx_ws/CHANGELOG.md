@@ -1,10 +1,14 @@
 # NGINX Web Server Add-on
 
+### 29.01.2024 - 1.25.3-alpine3.18-slim-b
+- Added a default `.htpasswd` file and example setup in NGINX config file.
+- Cleand up the code and corrected a minor bug in the variables.
+
 ### 28.01.2024 - 1.25.3-alpine3.18-slim
 - Basically changed everything in the backend, so it's much more flexible, but here's a short summary.
 - Set `base_folder` in config, this will be the folder that will contain the website and all the configuration files. Default is `/config`, but ou can change this to `/share` or `/media`, with or without subfolders as you like.
-- Set `site_name` and `site_url` in config, these are used for filenames and folders, as well as generating a nginx config file at `/<base_folder>/<site_name>/cfg/nginx/<site_name>.conf` unless you already have a config file in that folder. It will be enabled by default, and can be modified to suit your needs.
-- `/<base_folder>/<site_name>/html/` is the defult root folder for your web server. If this is empty, a default nginx `index.html` welcom page will be generated in here.
+- Set `site_name` and `site_url` in config, these are used for filenames and folders, as well as generating a NGINX config file at `/<base_folder>/<site_name>/cfg/nginx/<site_name>.conf` unless you already have a config file in that folder. It will be enabled by default, and can be modified to suit your needs.
+- `/<base_folder>/<site_name>/html/` is the defult root folder for your web server. If this is empty, a default NGINX `index.html` welcom page will be generated in here.
 - `/<base_folder>/<site_name>/cfg/` will hold the `apk.txt`, `crontab` and `requirements.txt` files where you can define packages to be installed and cron jobs that shall run on a schedule.
 - `/<base_folder>/<site_name>/cfg/cont-init.d/` will hold the container startup scripts. These scripts will be repopulated if deleted, but you can remove the contents of the files to disable them. You can also add your own scripts. The scripts are ran in alphabetical order, hence the numbers on the start of the filenames.
 - Fix execute permission for custom scripts in `/<base_folder>/<site_name>/cfg/cont-init.d`.

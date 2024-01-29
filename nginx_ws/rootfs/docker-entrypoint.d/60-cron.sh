@@ -1,5 +1,5 @@
 #!/bin/sh
-# shellcheck shell=sh
+# shellcheck shell=sh disable=SC1091
 
 set -e
 

@@ -1,5 +1,5 @@
-# shellcheck shell=sh
-# Do not change these, they are set in the Add-on configuration
+# shellcheck shell=sh disable=SC2034
+# Do not change these or their line number, they are set in the Add-on configuration
 SITENAME=$(grep -o '"site_name": "[^"]*"' /data/options.json | awk -F'"' '{print $4}')
 SITE_URL=$(grep -o '"site_url": "[^"]*"' /data/options.json | awk -F'"' '{print $4}')
 BASE_DIR=$(grep -o '"base_dir": "[^"]*"' /data/options.json | awk -F'"' '{print $4}')
@@ -15,6 +15,7 @@ NGINX_FILE="${NGINX_DIR}/${SITENAME}.conf"
 APK_FILE="${CONF_DIR}/apk.txt"
 CRON_FILE="${CONF_DIR}/crontab"
 PIP_FILE="${CONF_DIR}/requirements.txt"
+HTPASSWD="${NGINX_DIR}/.htpasswd"
 PIP_PACK="py3-pip"
 PY3_PACK="python3"
 
