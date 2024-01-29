@@ -29,22 +29,25 @@
 ## Folder structure
 
 ```
-<base_folder>/
- └─<site_name>/
-    ├─cfg/
-    │  ├─cont-init.d/
-    │  │  └─xx-script.sh           <- Scripts to run at startup
-    │  ├─log/
-    │  │  ├─<site_name>.access.log 
-    │  │  └─<site_name>.error.log 
-    │  ├─nginx/
-    │  │  ├─.htpasswd              <- Basic auth cridentials file
-    │  │  └─<site_name>.conf       <- Server configuration
-    │  ├─apk.txt                   <- Alpine packages to be installed
-    │  ├─crontab                   <- Cron jobs
-    │  └─requirements.txt          <- Pip packages to be installed
-    └─html/
-       └─index.html                <- Website
+/
+ ├─config/
+ │  └─logs/
+ │     ├─<site_name>.access.log 
+ │     └─<site_name>.error.log 
+ │
+ └─<base_folder>/
+     └─<site_name>/
+        ├─cfg/
+        │  ├─cont-init.d/
+        │  │  └─xx-script.sh       <- Scripts to run at startup
+        │  ├─nginx/
+        │  │  ├─.htpasswd          <- Basic auth cridentials file
+        │  │  └─<site_name>.conf   <- Server configuration
+        │  ├─apk.txt               <- Alpine packages to be installed
+        │  ├─crontab               <- Cron jobs
+        │  └─requirements.txt      <- Pip packages to be installed
+        └─html/
+           └─index.html            <- Website
  ```
 
 ### Example `apk.txt` file

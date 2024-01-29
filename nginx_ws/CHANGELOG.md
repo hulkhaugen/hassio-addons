@@ -2,6 +2,7 @@
 
 ### 29.01.2024 - 1.25.3-alpine3.18-slim-b
 - Added a default `.htpasswd` file and example setup in NGINX config file.
+- Moved `logs` folder from `<base_dir>` to `/config` for backup pupouses.
 - Cleand up the code and corrected a minor bug in the variables.
 
 ### 28.01.2024 - 1.25.3-alpine3.18-slim

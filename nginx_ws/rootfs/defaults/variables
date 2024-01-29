@@ -6,10 +6,10 @@ BASE_DIR=$(grep -o '"base_dir": "[^"]*"' /data/options.json | awk -F'"' '{print 
 
 # These you can change if you absolute must
 SAMB_DIR="/addon_configs/5ec262d9_nginx_ws"
+LOGS_DIR="/config/logs"
 HTML_DIR="${BASE_DIR}/${SITENAME}/html"
 CONF_DIR="${BASE_DIR}/${SITENAME}/cfg"
 INIT_DIR="${CONF_DIR}/cont-init.d"
-LOGS_DIR="${CONF_DIR}/log"
 NGINX_DIR="${CONF_DIR}/nginx"
 NGINX_FILE="${NGINX_DIR}/${SITENAME}.conf"
 APK_FILE="${CONF_DIR}/apk.txt"
