@@ -1,5 +1,8 @@
 # EmulatorJS Add-on
 
+### 29.01.2024 - 1.8.5-ls94 
+  - Update to latest version [1.8.5-ls94](https://github.com/linuxserver/docker-emulatorjs/releases/tag/1.8.5-ls94).
+
 ### 28.01.2024 - 1.8.5-ls93 
   - Update to latest version [1.8.5-ls93](https://github.com/linuxserver/docker-emulatorjs/releases/tag/1.8.5-ls93).
   - Added Atari 5200 support.

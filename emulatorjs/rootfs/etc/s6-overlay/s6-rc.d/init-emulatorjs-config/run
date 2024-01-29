@@ -1,15 +1,17 @@
 #!/usr/bin/with-contenv bash
 # shellcheck shell=bash
 
-# permissions
-lsiown abc:abc \
-    /data
-
 # hassio variables
 DISABLE_IPFS=$(jq -r '.disable_ipfs' /data/options.json)
 ROM_DIR=$(jq -r '.roms_folder' /data/options.json)
 
+# permissions
+lsiown abc:abc \
+    /data
+
+# hassio-mod: check if ipfs is disabled
 if [[ "${DISABLE_IPFS}" != true ]]; then
+
     # ipfs migrate check on startup
     if [[ -d "/data/.ipfs" ]]; then
         echo "[ipfs-upgrade] Checking if fs-repo needs to be upgraded (this may take some time)"
