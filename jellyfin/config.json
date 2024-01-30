@@ -1,6 +1,6 @@
 {
   "name": "Jellyfin",
-  "version": "10.8.13-1-ls242",
+  "version": "10.8.13-1-ls243",
   "slug": "jellyfin",
   "description": "Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media.",
   "url": "https://github.com/hulkhaugen/hassio-addons/tree/master/jellyfin",
