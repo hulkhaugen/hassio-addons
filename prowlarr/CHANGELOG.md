@@ -1,7 +1,10 @@
 # Prowlarr Add-on
 
+### 31.01.2024 - 1.12.2.4211-ls50 
+  - Update to latest version [1.12.2.4211-ls50](https://github.com/linuxserver/docker-prowlarr/releases/tag/1.12.2.4211-ls50).
+
 ### 24.01.2024 - 1.12.2.4211-ls49 
-  - Update to latest version [1.12.2.4211-ls49](https://github.com/linuxserver/docker-prowlarr/releases/tag/1.12.2.4211-ls49)
+  - Update to latest version [1.12.2.4211-ls49](https://github.com/linuxserver/docker-prowlarr/releases/tag/1.12.2.4211-ls49).
   - Added `build.json` for specificity of image to pull based on arcitechure.
 
 ### 18.01.2024 - 1.12.2.4211-ls48
