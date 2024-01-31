@@ -1,24 +1,31 @@
 # EmulatorJS Add-on
 
-### 29.01.2024 - 1.8.5-ls94 
+### 31.01.2024 - 1.8.7-ls96
+  - Update to latest version [1.8.7-ls96](https://github.com/linuxserver/docker-emulatorjs/releases/tag/1.8.7-ls96).
+
+### 30.01.2024 - 1.8.6-ls95
+  - Update to latest version [1.8.6-ls95](https://github.com/linuxserver/docker-emulatorjs/releases/tag/1.8.6-ls95).
+
+### 29.01.2024 - 1.8.5-ls94
   - Update to latest version [1.8.5-ls94](https://github.com/linuxserver/docker-emulatorjs/releases/tag/1.8.5-ls94).
 
-### 28.01.2024 - 1.8.5-ls93 
+### 28.01.2024 - 1.8.5-ls93
   - Update to latest version [1.8.5-ls93](https://github.com/linuxserver/docker-emulatorjs/releases/tag/1.8.5-ls93).
   - Added Atari 5200 support.
   - Added config option to configure `roms_folder`.
   - Added `rw` properties for the `media` and `share` folders.
+  - Skip IPFS config if `disable_ipfs` is set to `true`. 
 
-### 26.01.2024 - 1.8.4-ls92 
+### 26.01.2024 - 1.8.4-ls92
   - Update to latest version [1.8.4-ls92](https://github.com/linuxserver/docker-emulatorjs/releases/tag/1.8.4-ls92).
 
-### 25.01.2024 - 1.8.3-ls91 
+### 25.01.2024 - 1.8.3-ls91
   - Update to latest version [1.8.3-ls91](https://github.com/linuxserver/docker-emulatorjs/releases/tag/1.8.3-ls91).
 
-### 25.01.2024 - 1.8.3-ls90 
+### 25.01.2024 - 1.8.3-ls90
   - Update to latest version [1.8.3-ls90](https://github.com/linuxserver/docker-emulatorjs/releases/tag/1.8.3-ls90).
 
-### 24.01.2024 - 1.8.3-ls89 
+### 24.01.2024 - 1.8.3-ls89
   - Update to latest version [1.8.3-ls89](https://github.com/linuxserver/docker-emulatorjs/releases/tag/1.8.3-ls89).
   - Changed ROMs folder structure, now located at `/addon_configs/5ec262d9_emulatorjs/roms/`.
   - New Add-on configuration option to disable IPFS. If disabled, IPFS cache will be erased.
