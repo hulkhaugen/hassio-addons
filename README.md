@@ -38,5 +38,8 @@ This is a small set of Add-ons for Home Assistant. These are ment to be as plain
 ## Sonarr
 <img src="https://raw.githubusercontent.com/hulkhaugen/hassio-addons/main/sonarr/icon.png" alt="Sonarr" width="64" align="left" style="padding-right:12px">[Sonarr](https://sonarr.tv/) is a PVR for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.
 
+## Syncthing
+<img src="https://raw.githubusercontent.com/hulkhaugen/hassio-addons/main/syncthing/icon.png" alt="Syncthing" width="64" align="left" style="padding-right:12px">[Syncthing](https://syncthing.net/) replaces proprietary sync and cloud services with something open, trustworthy and decentralized. Your data is your data alone and you deserve to choose where it is stored, if it is shared with some third party and how it's transmitted over the Internet.
+
 ## Tautulli
 <img src="https://raw.githubusercontent.com/hulkhaugen/hassio-addons/main/tautulli/icon.png" alt="Tautulli" width="64" align="left" style="padding-right:12px">[Tautulli](https://tautulli.com/) is a 3rd party application that you can run alongside your Plex Media Server to monitor activity and track various statistics. Most importantly, these statistics include what has been watched, who watched it, when and where they watched it, and how it was watched. The only thing missing is "why they watched it", but who am I to question your 42 plays of Frozen. All statistics are presented in a nice and clean interface with many tables and graphs, which makes it easy to brag about your server to everyone else.
