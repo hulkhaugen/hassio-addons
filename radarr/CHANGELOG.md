@@ -1,5 +1,8 @@
 # Radarr Add-on
 
+### 18.02.2024 - 5.3.6.8612 
+  - Update to latest version [5.3.6.8612](https://github.com/linuxserver/docker-radarr/releases/tag/5.3.6.8612-ls204).
+
 ### 04.02.2024 - 5.2.6.8376 
   - Update to latest version [5.2.6.8376](https://github.com/linuxserver/docker-radarr/releases/tag/5.2.6.8376-ls202).
   - Changed version scheme to exclude minor Linuxserver specific versions.
