@@ -1,5 +1,10 @@
 # NGINX Web Server Add-on
 
+### 01.03.2024 - 1.25.4-alpine3.18-slim
+- Update image to [nginx:1.25.4-alpine3.18-slim](https://hub.docker.com/layers/library/nginx/1.25.4-alpine3.18-slim/images/sha256-bfe4c4c4c3a640ca73f5a43231b5382034968506d3bb37c9b98e4a8d695e0e10).
+- Breaking change, renamed a couple of global variables related to NGINX. If you're having issues, try deleting the `55-nginx-init.sh` script and others if you suspect them. They will be re-added.
+- Further cleaned up code.
+
 ### 29.01.2024 - 1.25.3-alpine3.18-slim-b
 - Added a default `.htpasswd` file and example setup in NGINX config file.
 - Moved `logs` folder from `<base_dir>` to `/config` for backup pupouses.
@@ -9,9 +14,9 @@
 - Basically changed everything in the backend, so it's much more flexible, but here's a short summary.
 - Set `base_folder` in config, this will be the folder that will contain the website and all the configuration files. Default is `/config`, but ou can change this to `/share` or `/media`, with or without subfolders as you like.
 - Set `site_name` and `site_url` in config, these are used for filenames and folders, as well as generating a NGINX config file at `/<base_folder>/<site_name>/cfg/nginx/<site_name>.conf` unless you already have a config file in that folder. It will be enabled by default, and can be modified to suit your needs.
-- `/<base_folder>/<site_name>/html/` is the defult root folder for your web server. If this is empty, a default NGINX `index.html` welcom page will be generated in here.
+- `/<base_folder>/<site_name>/html/` is the defult root folder for your web server. If this is empty, a default NGINX `index.html` welcome page will be generated in here.
 - `/<base_folder>/<site_name>/cfg/` will hold the `apk.txt`, `crontab` and `requirements.txt` files where you can define packages to be installed and cron jobs that shall run on a schedule.
-- `/<base_folder>/<site_name>/cfg/cont-init.d/` will hold the container startup scripts. These scripts will be repopulated if deleted, but you can remove the contents of the files to disable them. You can also add your own scripts. The scripts are ran in alphabetical order, hence the numbers on the start of the filenames.
+- `/<base_folder>/<site_name>/cfg/cont-init.d/` will hold the container startup scripts. These scripts will be repopulated if deleted, but you can comment out or remove the contents of the files to disable them. You can also add your own scripts. The scripts are ran in alphanumerical order, hence the numbers on the start of the filenames.
 - Fix execute permission for custom scripts in `/<base_folder>/<site_name>/cfg/cont-init.d`.
 - Added `build.json` for specificity of image to pull based on arcitechure.
 

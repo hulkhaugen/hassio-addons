@@ -2,31 +2,22 @@
 # Hassio modifications
 . /defaults/variables
 
-# Updating variables file with values from Add-on config
-sed -i "3s#.*#SITENAME=\"${SITENAME}\"#" "/defaults/variables"
-sed -i "4s#.*#SITE_URL=\"${SITE_URL}\"#" "/defaults/variables"
-sed -i "5s#.*#BASE_DIR=\"${BASE_DIR}\"#" "/defaults/variables"
-
 # Creating folder structure
-for DIR in $DIRS; do
-    if [ ! -d "$DIR" ]; then
+for DIR in ${DIRS}; do
+    if [ ! -d "${DIR}" ]; then
         echo "$0: Creating folder ${DIR}"
-        mkdir -p "$DIR"
+        mkdir -p "${DIR}"
     fi
 done
 
-# Copying original scripts to new folder
-for script in /docker-entrypoint.d/*; do
-    if [ -f "$script" ] && [ ! -f "${INIT_DIR}/$(basename "$script")" ]; then
-        echo "$0: Copying $script to ${INIT_DIR}"
-        cp -r "$script" "$INIT_DIR"
-    fi
-done
-
-# Adding execution permission to original and custom scripts in new location
-for script in "$INIT_DIR"/*; do
-    if [ ! -x "${script}" ]; then
-        echo "$0: Making ${script} executable"
-        chmod +x "${script}"
+# Copying scripts to init folder, removing shellcheck, adding execution permission
+for script in "/docker-entrypoint.d/"*; do
+    target="${INIT_DIR}/$(basename "${script}")"
+    if [ -f "${script}" ] && [ ! -f "${target}" ]; then
+        echo "$0: Copying ${script} to ${INIT_DIR}"
+        cp -r "${script}" "${INIT_DIR}"
+        sed -i "/^# shellcheck/d" "${target}"
+        echo "$0: Making ${target} executable"
+        chmod +x "${target}"
     fi
 done

@@ -8,14 +8,14 @@ set -e
 SCRIPT=$(basename "$0")
 
 # Cron setup
-if [ -s "$CRON_FILE" ]; then
-    echo "${SCRIPT}: Crontab file found, activating ${CRON_FILE}"
-    crontab "$CRON_FILE"
+if [ -s "${CRON_TAB}" ]; then
+    echo "${SCRIPT}: Crontab file found, activating ${CRON_TAB}"
+    crontab "${CRON_TAB}"
     echo "${SCRIPT}: Starting cron daemon"
     crond
-elif [ -f "$CRON_FILE" ]; then
-    echo "${SCRIPT}: Nothing defined in ${CRON_FILE}"
+elif [ -f "${CRON_TAB}" ]; then
+    echo "${SCRIPT}: Nothing defined in ${CRON_TAB}"
 else
-    echo "${SCRIPT}: No crontab file found, creating template crontab file at ${CRON_FILE}"
-    touch "$CRON_FILE"
+    echo "${SCRIPT}: No crontab file found, creating template crontab file at ${CRON_TAB}"
+    touch "${CRON_TAB}"
 fi

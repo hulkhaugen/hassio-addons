@@ -12,13 +12,13 @@ echo "${SCRIPT}: Setting NGINX global log destination to ${LOGS_DIR}"
 sed -i "s#/var/log/nginx/#${LOGS_DIR}/#g" /etc/nginx/nginx.conf
 
 # Modifying configuration files destination
-echo "${SCRIPT}: Setting ${NGINX_DIR} as folder for server configurations"
-sed -i "s#/etc/nginx/conf.d#${NGINX_DIR}#" /etc/nginx/nginx.conf
+echo "${SCRIPT}: Setting ${NGINXDIR} as folder for server configurations"
+sed -i "s#/etc/nginx/conf.d#${NGINXDIR}#" /etc/nginx/nginx.conf
 
 # Checking existence of configuration files, generating if none
-if [ -z "$(ls -A "${NGINX_DIR}"/*.conf 2>/dev/null)" ]; then
-    echo "${SCRIPT}: No configuration files found, creating ${NGINX_FILE}"
-    cat <<EOF >"${NGINX_FILE}"
+if [ -z "$(ls -A "${NGINXDIR}"/*.conf 2>/dev/null)" ]; then
+    echo "${SCRIPT}: No configuration files found, creating ${SITE_CFG}"
+    cat <<EOF >"${SITE_CFG}"
 server {
   listen 80 default_server;
   listen [::]:80 default_server;
@@ -28,7 +28,7 @@ server {
   root ${HTML_DIR};
   index index.html;
 #  location /images/ {
-#    alias /data/images/;
+#    alias /media/images/;
 #    try_files \$uri =404;
 #  }
 # location /top_secret/ {
@@ -40,14 +40,14 @@ server {
 }
 EOF
 else
-    echo "${SCRIPT}: Configuration file(s) found in ${NGINX_DIR}"
+    echo "${SCRIPT}: Configuration file(s) found in ${NGINXDIR}"
 fi
 
 # Checking existence of index file, generating if none
 for index in "${HTML_DIR}/index"*; do
-    if [ ! -f "$index" ]; then
+    if [ ! -f "${index}" ]; then
         echo "${SCRIPT}: No index file found, copying default NGINX welcome site to ${HTML_DIR}"
-        cp -r /usr/share/nginx/html/index.html "${HTML_DIR}/index.html"
+        cp -r "/usr/share/nginx/html/index.html" "${HTML_DIR}/index.html"
         sed -i "20s#.*#<p>Check out <a href=\"https://github.com/hulkhaugen/hassio-addons/blob/main/nginx_ws/DOCS.md\">NGINX Web Server Add-on DOCS.md</a> for Add-on specific info.</p>#" "${HTML_DIR}/index.html"
     fi
 done
