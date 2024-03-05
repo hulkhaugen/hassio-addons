@@ -1,6 +1,6 @@
 {
   "name": "Syncthing",
-  "version": "v1.27.3",
+  "version": "v1.27.4",
   "slug": "syncthing",
   "description": "Syncthing is a continuous file synchronization program. It synchronizes files between two or more computers.",
   "url": "https://github.com/hulkhaugen/hassio-addons/tree/master/syncthing",
