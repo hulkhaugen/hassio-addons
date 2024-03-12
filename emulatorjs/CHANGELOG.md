@@ -1,5 +1,8 @@
 # EmulatorJS Add-on
 
+### 12.03.2024 - 1.8.9 
+  - Update to latest version [1.8.9](https://github.com/linuxserver/docker-emulatorjs/releases/tag/1.8.9-ls105).
+
 ### 06.02.2024 - 1.8.8 
   - Update to latest version [1.8.8](https://github.com/linuxserver/docker-emulatorjs/releases/tag/1.8.8-ls99).
 
