@@ -1,6 +1,6 @@
 {
   "build_from": {
-    "aarch64": "lscr.io/linuxserver/prowlarr:arm64v8-version-1.13.3.4273",
-    "amd64": "lscr.io/linuxserver/prowlarr:amd64-version-1.13.3.4273"
+    "aarch64": "lscr.io/linuxserver/prowlarr:arm64v8-version-1.14.3.4333",
+    "amd64": "lscr.io/linuxserver/prowlarr:amd64-version-1.14.3.4333"
   }
 }
