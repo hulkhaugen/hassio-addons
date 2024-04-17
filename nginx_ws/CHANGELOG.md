@@ -1,5 +1,8 @@
 # NGINX Web Server Add-on
 
+### 17.04.2024 - 1.25.5-alpine3.19-slim
+- Update image to [nginx:1.25.5-alpine3.19-slim](https://hub.docker.com/layers/library/nginx/1.25.5-alpine3.19-slim/images/sha256-eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb?context=explore).
+
 ### 01.03.2024 - 1.25.4-alpine3.18-slim
 - Update image to [nginx:1.25.4-alpine3.18-slim](https://hub.docker.com/layers/library/nginx/1.25.4-alpine3.18-slim/images/sha256-bfe4c4c4c3a640ca73f5a43231b5382034968506d3bb37c9b98e4a8d695e0e10).
 - Breaking change, renamed a couple of global variables related to NGINX. If you're having issues, try deleting the `55-nginx-init.sh` script and others if you suspect them. They will be re-added.
