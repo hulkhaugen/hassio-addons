@@ -23,7 +23,7 @@ if [ -s "${PIP_FILE}" ]; then
 
     # Continue install pip3 dependencies defined in requirements.txt
     echo "${SCRIPT}: Installing dependencies defined in ${PIP_FILE}"
-    pip3 install --no-cache-dir -r "${PIP_FILE}"
+    pip3 install --no-cache-dir -r "${PIP_FILE}" --break-system-packages
 
 elif [ -f "${PIP_FILE}" ]; then
     echo "${SCRIPT}: Nothing defined in ${PIP_FILE}"
