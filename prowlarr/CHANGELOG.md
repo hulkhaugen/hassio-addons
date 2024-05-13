@@ -1,5 +1,8 @@
 # Prowlarr Add-on
 
+### 13.05.2024 - 1.17.2.4511 
+  - Update to latest version [1.17.2.4511](https://github.com/linuxserver/docker-prowlarr/releases/tag/1.17.2.4511-ls69).
+
 ### 20.04.2024 - 1.16.2.4435 
   - Update to latest version [1.16.2.4435](https://github.com/linuxserver/docker-prowlarr/releases/tag/1.16.2.4435-ls66).
 

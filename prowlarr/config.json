@@ -1,6 +1,6 @@
 {
   "name": "Prowlarr",
-  "version": "1.16.2.4435",
+  "version": "1.17.2.4511",
   "slug": "prowlarr",
   "description": "Prowlarr is an indexer manager/proxy built on the popular arr .net/reactjs base stack to integrate with your various PVR apps",
   "url": "https://github.com/hulkhaugen/hassio-addons/tree/master/prowlarr",
