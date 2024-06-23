@@ -1,6 +1,6 @@
 {
   "name": "Tautulli",
-  "version": "v2.14.2",
+  "version": "v2.14.3",
   "slug": "tautulli",
   "description": "Tautulli is a python based web application for monitoring, analytics and notifications for Plex Media Server.",
   "url": "https://github.com/hulkhaugen/hassio-addons/tree/master/tautulli",
