@@ -1,9 +1,9 @@
 {
   "build_from": {
-    "aarch64": "docker.io/library/nginx:1.25.5-alpine3.19-slim",
-    "amd64": "docker.io/library/nginx:1.25.5-alpine3.19-slim",
-    "armhf": "docker.io/library/nginx:1.25.5-alpine3.19-slim",
-    "armv7": "docker.io/library/nginx:1.25.5-alpine3.19-slim",
-    "i386": "docker.io/library/nginx:1.25.5-alpine3.19-slim"
+    "aarch64": "docker.io/library/nginx:1.27.0-alpine3.19-slim",
+    "amd64": "docker.io/library/nginx:1.27.0-alpine3.19-slim",
+    "armhf": "docker.io/library/nginx:1.27.0-alpine3.19-slim",
+    "armv7": "docker.io/library/nginx:1.27.0-alpine3.19-slim",
+    "i386": "docker.io/library/nginx:1.27.0-alpine3.19-slim"
   }
 }

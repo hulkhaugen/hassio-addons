@@ -1,6 +1,6 @@
 {
     "name": "NGINX Web Server",
-    "version": "1.25.5-alpine3.19-slim",
+    "version": "1.27.0-alpine3.19-slim",
     "slug": "nginx_ws",
     "description": "Highly configurable NGINX Web Server based on Alpine Slim.",
     "url": "https://github.com/hulkhaugen/hassio-addons/tree/master/nginx_ws",
