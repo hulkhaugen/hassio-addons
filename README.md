@@ -18,28 +18,33 @@ This is a small set of Add-ons for Home Assistant. These are ment to be as plain
 # Add-ons
 
 ## EmulatorJS
+
 <img src="https://raw.githubusercontent.com/hulkhaugen/hassio-addons/main/emulatorjs/icon.png" alt="EmulatorJS" width="64" align="left" style="padding-right:12px">[EmulatorJS](https://docs.linuxserver.io/images/docker-emulatorjs/) - In browser web based emulation portable to nearly any device for many retro consoles. A mix of emulators is used between Libretro and EmulatorJS. The frontend application has been initially optimized around being used with a standard gamepad. The navigation revolves around the up/down/left/right keys to browse the menus and launch games. Mobile browsers will function, just keep in mind compatibility will be reduced especially for CD based games.
 
-## Jellyfin
-<img src="https://raw.githubusercontent.com/hulkhaugen/hassio-addons/main/jellyfin/icon.png" alt="Jellyfin" width="64" align="left" style="padding-right:12px">[Jellyfin](https://jellyfin.org/) is a Free Software Media System that puts you in control of managing and streaming your media. It is an alternative to the proprietary Emby and Plex, to provide media from a dedicated server to end-user devices via multiple apps. Jellyfin is descended from Emby's 3.5.2 release and ported to the .NET Core framework to enable full cross-platform support. There are no strings attached, no premium licenses or features, and no hidden agendas: just a team who want to build something better and work together to achieve it.
-
 ## NGINX Web Server
+
 <img src="https://raw.githubusercontent.com/hulkhaugen/hassio-addons/main/nginx_ws/icon.png" alt="NGINX Web Server" width="64" align="left" style="padding-right:12px">[NGINX](https://www.nginx.com/) is based on the official [NGINX Alpine Slim](https://hub.docker.com/_/nginx) image from Docker Hub, and has a footprint of only 5 MB. It installs the NGINX image, and sets up a folder structure where you can configure a server, configure crontab, add Alpine APK packages and PyPI packages, add and modify start-up scripts. Initially very light, but flexible in that you can add pretty much anything you need.
 
 ## Prowlarr
+
 <img src="https://raw.githubusercontent.com/hulkhaugen/hassio-addons/main/prowlarr/icon.png" alt="Prowlarr" width="64" align="left" style="padding-right:12px">[Prowlarr](https://prowlarr.com/) is an indexer manager/proxy built on the popular arr .net/reactjs base stack to integrate with your various PVR apps. Prowlarr supports management of both Torrent Trackers and Usenet Indexers. It integrates seamlessly with LazyLibrarian, Lidarr, Mylar3, Radarr, Readarr, and Sonarr offering complete management of your indexers with no per app Indexer setup required (we do it all).
 
 ## qBittorrent
+
 <img src="https://raw.githubusercontent.com/hulkhaugen/hassio-addons/main/qbittorrent/icon.png" alt="qBittorrent" width="64" align="left" style="padding-right:12px">The [qBittorrent project](https://www.qbittorrent.org/) aims to provide an open-source software alternative to µTorrent.Additionally, qBittorrent runs and provides the same features on all major platforms (FreeBSD, Linux, macOS, OS/2, Windows). qBittorrent is based on the Qt toolkit and libtorrent-rasterbar library.
 
 ## Radarr
+
 <img src="https://raw.githubusercontent.com/hulkhaugen/hassio-addons/main/radarr/icon.png" alt="Radarr" width="64" align="left" style="padding-right:12px">[Radarr](https://radarr.video/) is a movie collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new movies and will interface with clients and indexers to grab, sort, and rename them. It can also be configured to automatically upgrade the quality of existing files in the library when a better quality format becomes available.
 
 ## Sonarr
+
 <img src="https://raw.githubusercontent.com/hulkhaugen/hassio-addons/main/sonarr/icon.png" alt="Sonarr" width="64" align="left" style="padding-right:12px">[Sonarr](https://sonarr.tv/) is a PVR for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.
 
 ## Syncthing
+
 <img src="https://raw.githubusercontent.com/hulkhaugen/hassio-addons/main/syncthing/icon.png" alt="Syncthing" width="64" align="left" style="padding-right:12px">[Syncthing](https://syncthing.net/) replaces proprietary sync and cloud services with something open, trustworthy and decentralized. Your data is your data alone and you deserve to choose where it is stored, if it is shared with some third party and how it's transmitted over the Internet.
 
 ## Tautulli
+
 <img src="https://raw.githubusercontent.com/hulkhaugen/hassio-addons/main/tautulli/icon.png" alt="Tautulli" width="64" align="left" style="padding-right:12px">[Tautulli](https://tautulli.com/) is a 3rd party application that you can run alongside your Plex Media Server to monitor activity and track various statistics. Most importantly, these statistics include what has been watched, who watched it, when and where they watched it, and how it was watched. The only thing missing is "why they watched it", but who am I to question your 42 plays of Frozen. All statistics are presented in a nice and clean interface with many tables and graphs, which makes it easy to brag about your server to everyone else.
