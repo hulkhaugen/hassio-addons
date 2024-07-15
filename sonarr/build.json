@@ -1,6 +1,6 @@
 {
   "build_from": {
-    "aarch64": "lscr.io/linuxserver/sonarr:arm64v8-version-4.0.6.1805",
-    "amd64": "lscr.io/linuxserver/sonarr:amd64-version-4.0.6.1805"
+    "aarch64": "lscr.io/linuxserver/sonarr:arm64v8-version-4.0.7.1863",
+    "amd64": "lscr.io/linuxserver/sonarr:amd64-version-4.0.7.1863"
   }
 }

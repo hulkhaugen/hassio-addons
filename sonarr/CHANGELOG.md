@@ -1,5 +1,8 @@
 # Sonarr Add-on
 
+### 15.07.2024 - 4.0.7.1863 
+  - Update to latest version [4.0.7.1863](https://github.com/linuxserver/docker-sonarr/releases/tag/4.0.7.1863-ls247).
+
 ### 04.07.2024 - 4.0.6.1805 
   - Update to latest version [4.0.6.1805](https://github.com/linuxserver/docker-sonarr/releases/tag/4.0.6.1805-ls244).
 
