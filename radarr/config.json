@@ -1,6 +1,6 @@
 {
   "name": "Radarr",
-  "version": "5.8.3.8933",
+  "version": "5.9.1.9070",
   "slug": "radarr",
   "description": "Radarr is a movie collection manager for Usenet and BitTorrent users",
   "url": "https://github.com/hulkhaugen/hassio-addons/tree/master/sonarr",

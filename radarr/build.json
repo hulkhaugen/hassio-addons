@@ -1,6 +1,6 @@
 {
   "build_from": {
-    "aarch64": "lscr.io/linuxserver/radarr:arm64v8-version-5.8.3.8933",
-    "amd64": "lscr.io/linuxserver/radarr:amd64-version-5.8.3.8933"
+    "aarch64": "lscr.io/linuxserver/radarr:arm64v8-version-5.9.1.9070",
+    "amd64": "lscr.io/linuxserver/radarr:amd64-version-5.9.1.9070"
   }
 }
