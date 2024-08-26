@@ -1,12 +1,16 @@
 # NGINX Web Server Add-on
 
+### 26.08.2024 - 1.27.1-alpine3.20-slim
+
+- Update image to [nginx:1.27.1-alpine3.20-slim](https://hub.docker.com/layers/library/nginx/1.27.1-alpine3.20-slim/images/sha256-15d20a9e80b094bc7fea73c8207bac1d2196d02251df24c6bbc58b19af1b4fd5).
+
 ### 05.07.2024 - 1.27.0-alpine3.19-slim
 
-- Update image to [nginx:1.27.0-alpine3.19-slim](https://hub.docker.com/layers/library/nginx/1.27.0-alpine3.19-slim/images/sha256-20f83f2e3d34133d52bffba21c0ddde6c194e8c2bb4efd9812cd6842feed184a?context=explore).
+- Update image to [nginx:1.27.0-alpine3.19-slim](https://hub.docker.com/layers/library/nginx/1.27.0-alpine3.19-slim/images/sha256-20f83f2e3d34133d52bffba21c0ddde6c194e8c2bb4efd9812cd6842feed184a).
 
 ### 17.04.2024 - 1.25.5-alpine3.19-slim
 
-- Update image to [nginx:1.25.5-alpine3.19-slim](https://hub.docker.com/layers/library/nginx/1.25.5-alpine3.19-slim/images/sha256-eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb?context=explore).
+- Update image to [nginx:1.25.5-alpine3.19-slim](https://hub.docker.com/layers/library/nginx/1.25.5-alpine3.19-slim/images/sha256-eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb).
 
 ### 01.03.2024 - 1.25.4-alpine3.18-slim
 

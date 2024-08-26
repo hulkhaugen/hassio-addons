@@ -1,42 +1,28 @@
 {
-    "name": "NGINX Web Server",
-    "version": "1.27.0-alpine3.19-slim",
-    "slug": "nginx_ws",
-    "description": "Highly configurable NGINX Web Server based on Alpine Slim.",
-    "url": "https://github.com/hulkhaugen/hassio-addons/tree/master/nginx_ws",
-    "arch": [
-        "aarch64",
-        "amd64",
-        "armhf",
-        "armv7",
-        "i386"
-    ],
-    "init": false,
-    "webui": "http://[HOST]:[PORT:8765]",
-    "ports": {
-        "80/tcp": 8765
-    },
-    "ports_description": {
-        "80/tcp": "HTTP Interface"
-    },
-    "map": [
-        "addon_config:rw",
-        "media:rw",
-        "share:rw"
-    ],
-    "options": {
-        "base_dir": "/config",
-        "site_name": "example",
-        "site_url": "www.example.com"
-    },
-    "schema": {
-        "base_dir": "str",
-        "site_name": "str",
-        "site_url": "str"
-    },
-    "backup_exclude": [
-        "**/__pycache__",
-        "**/tmp",
-        "**/log"
-    ]
+  "name": "NGINX Web Server",
+  "version": "1.27.1-alpine3.20-slim",
+  "slug": "nginx_ws",
+  "description": "Highly configurable NGINX Web Server based on Alpine Slim.",
+  "url": "https://github.com/hulkhaugen/hassio-addons/tree/master/nginx_ws",
+  "arch": ["aarch64", "amd64", "armhf", "armv7", "i386"],
+  "init": false,
+  "webui": "http://[HOST]:[PORT:8765]",
+  "ports": {
+    "80/tcp": 8765
+  },
+  "ports_description": {
+    "80/tcp": "HTTP Interface"
+  },
+  "map": ["addon_config:rw", "media:rw", "share:rw"],
+  "options": {
+    "base_dir": "/config",
+    "site_name": "example",
+    "site_url": "www.example.com"
+  },
+  "schema": {
+    "base_dir": "str",
+    "site_name": "str",
+    "site_url": "str"
+  },
+  "backup_exclude": ["**/__pycache__", "**/tmp", "**/log"]
 }
