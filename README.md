@@ -31,7 +31,7 @@ This is a small set of Add-ons for Home Assistant. These are ment to be as plain
 
 ## qBittorrent
 
-<img src="https://raw.githubusercontent.com/hulkhaugen/hassio-addons/main/qbittorrent/icon.png" alt="qBittorrent" width="64" align="left" style="padding-right:12px">The [qBittorrent project](https://www.qbittorrent.org/) aims to provide an open-source software alternative to µTorrent.Additionally, qBittorrent runs and provides the same features on all major platforms (FreeBSD, Linux, macOS, OS/2, Windows). qBittorrent is based on the Qt toolkit and libtorrent-rasterbar library.
+<img src="https://raw.githubusercontent.com/hulkhaugen/hassio-addons/main/qbittorrent/icon.png" alt="qBittorrent" width="64" align="left" style="padding-right:12px">The [qBittorrent project](https://www.qbittorrent.org/) aims to provide an open-source software alternative to µTorrent. Additionally, qBittorrent runs and provides the same features on all major platforms (FreeBSD, Linux, macOS, OS/2, Windows). qBittorrent is based on the Qt toolkit and libtorrent-rasterbar library.
 
 ## Radarr
 
