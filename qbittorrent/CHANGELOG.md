@@ -1,5 +1,8 @@
 # qBittorrent Add-on
 
+### 30.09.2024 - 5.0.0-r0 
+  - Update to latest version [5.0.0-r0](https://github.com/linuxserver/docker-qbittorrent/releases/tag/5.0.0-r0-ls354).
+
 ### 19.09.2024 - 4.6.7-r0 
   - Update to latest version [4.6.7-r0](https://github.com/linuxserver/docker-qbittorrent/releases/tag/4.6.7-r0-ls351).
 
