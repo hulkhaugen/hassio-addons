@@ -1,6 +1,6 @@
 {
   "build_from": {
-    "aarch64": "lscr.io/linuxserver/tautulli:arm64v8-version-v2.14.5",
-    "amd64": "lscr.io/linuxserver/tautulli:amd64-version-v2.14.5"
+    "aarch64": "lscr.io/linuxserver/tautulli:arm64v8-version-v2.14.6",
+    "amd64": "lscr.io/linuxserver/tautulli:amd64-version-v2.14.6"
   }
 }
