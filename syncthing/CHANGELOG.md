@@ -1,5 +1,8 @@
 # Syncthing Add-on
 
+### 18.10.2024 - v1.28.0 
+  - Update to latest version [v1.28.0](https://github.com/linuxserver/docker-syncthing/releases/tag/v1.28.0-ls164).
+
 ### 07.09.2024 - v1.27.12 
   - Update to latest version [v1.27.12](https://github.com/linuxserver/docker-syncthing/releases/tag/v1.27.12-ls158).
 

@@ -1,6 +1,6 @@
 {
   "build_from": {
-    "aarch64": "lscr.io/linuxserver/syncthing:arm64v8-version-v1.27.12",
-    "amd64": "lscr.io/linuxserver/syncthing:amd64-version-v1.27.12"
+    "aarch64": "lscr.io/linuxserver/syncthing:arm64v8-version-v1.28.0",
+    "amd64": "lscr.io/linuxserver/syncthing:amd64-version-v1.28.0"
   }
 }
