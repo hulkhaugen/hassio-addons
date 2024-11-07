@@ -1,10 +1,13 @@
 {
   "name": "qBittorrent",
-  "version": "5.0.0-r2",
+  "version": "5.0.1-r0",
   "slug": "qbittorrent",
   "description": "The qBittorrent project aims to provide an open-source software alternative to \u00c2\u00b5Torrent",
   "url": "https://github.com/hulkhaugen/hassio-addons/tree/master/qbittorrent",
-  "arch": ["aarch64", "amd64"],
+  "arch": [
+    "aarch64",
+    "amd64"
+  ],
   "init": false,
   "webui": "http://[HOST]:[PORT:8080]",
   "ports": {
@@ -17,7 +20,11 @@
     "60065/tcp": "TCP connection port",
     "60065/udp": "UDP connection port"
   },
-  "map": ["addon_config:rw", "media:rw", "share:rw"],
+  "map": [
+    "addon_config:rw",
+    "media:rw",
+    "share:rw"
+  ],
   "backup_exclude": [
     "**/qBittorrent/GeoDB",
     "**/qBittorrent/logs",
