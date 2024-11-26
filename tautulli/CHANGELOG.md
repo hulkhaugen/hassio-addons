@@ -1,5 +1,8 @@
 # Tautulli Add-on
 
+### 26.11.2024 - v2.15.0 
+  - Update to latest version [v2.15.0](https://github.com/linuxserver/docker-tautulli/releases/tag/v2.15.0-ls166).
+
 ### 13.10.2024 - v2.14.6 
   - Update to latest version [v2.14.6](https://github.com/linuxserver/docker-tautulli/releases/tag/v2.14.6-ls159).
 
