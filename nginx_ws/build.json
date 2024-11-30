@@ -1,9 +1,0 @@
-{
-  "build_from": {
-    "aarch64": "docker.io/library/nginx:1.27.1-alpine3.20-slim",
-    "amd64": "docker.io/library/nginx:1.27.1-alpine3.20-slim",
-    "armhf": "docker.io/library/nginx:1.27.1-alpine3.20-slim",
-    "armv7": "docker.io/library/nginx:1.27.1-alpine3.20-slim",
-    "i386": "docker.io/library/nginx:1.27.1-alpine3.20-slim"
-  }
-}

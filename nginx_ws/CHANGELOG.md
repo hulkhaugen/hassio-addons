@@ -1,5 +1,10 @@
 # NGINX Web Server Add-on
 
+### 30.11.2024 - 1.27.3-alpine3.20-slim
+
+- Update image to [nginx:1.27.3-alpine3.20-slim](https://hub.docker.com/layers/library/nginx/1.27.3-alpine3.20-slim/images/sha256-a2d509cbd8a5a54c894cf518e94739f0936189631a24d05bb7c90e73ec639251).
+- Removed `build.json` as all files uses the same image. `Dockerfile` now directly use the Add-on version from `config.json` to build the image.
+
 ### 26.08.2024 - 1.27.1-alpine3.20-slim
 
 - Update image to [nginx:1.27.1-alpine3.20-slim](https://hub.docker.com/layers/library/nginx/1.27.1-alpine3.20-slim/images/sha256-15d20a9e80b094bc7fea73c8207bac1d2196d02251df24c6bbc58b19af1b4fd5).
